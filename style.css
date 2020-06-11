@@ -97,7 +97,7 @@ h1{
         grid-template-areas: 
         "section-one"
         "section-two"
-        "section-three"
+        "section-three";
     }
 
 }
