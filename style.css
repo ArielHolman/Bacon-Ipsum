@@ -4,7 +4,6 @@
 .header {
     grid-area:header;
 }
-
 .section-one{
     grid-area:section-one;
 }
@@ -14,61 +13,37 @@
 .section-three{
     grid-area:section-three;
 }
-
-/* .first-grid {
-    grid-template-rows: 1fr 3fr;
-    border: 2pt dotted red;
-    color: white;
-    background-color: #33A8DD;
-    display: flex;
-    justify-content: center;
-} */
-
-h1{
-    font-size: 40pt;
-    text-align: left;
+.main-grid {
+    grid-area: main-grid;
 }
-
-/* .second-grid {
-    /* grid-template-rows: 1fr 1fr 1fr;
-    border:2pt solid blue;
-    text-align: center;
-    background-color: #F7F5F6;
-} */ 
-
+body {
+    font-family: 'Noto Serif JP', serif;
+}
+h1 {
+    font-size: 30pt;
+    padding: 50pt 50pt;
+}
+h2 {
+    font-size: 25pt;
+    margin: 5pt;
+}
+p {
+    margin: 2pt 0 20pt;
+}
 .hr-one {
     width: 100%;
     height: 30pt;
     background-color: #33A8DD;
 }
-
-h2{
-    font-size: 25pt;
-}
-
 .hr-two {
     width: 100%;
     height: 30pt;
     background-color: #F46731;
 }
-
 .hr-three {
     width: 100%;
     height: 30pt;
     background-color: #2BCDC0;
-}
-
-h1{
-    background-color: #33A8DD (Blue)
-    ;
-}
-
-/* .gutters {
-    max-width: 30%;
-    margin: 30pt auto;
-} */
-.main-grid {
-    grid-area: main-grid;
 }
 
 @media (max-width: 992px) { 
@@ -81,8 +56,25 @@ h1{
         grid-template-areas: 
         "section-one section-two section-three ";
     }
+    .header {
+        text-align: center;
+        background-color: #2BCDC0;
+        color: white;
+    }
+    .main-properties {
+        text-align: center;
+        background-color: #1B1B1B;
+        padding: 10pt 20pt;
+        color: white;
+    }
+    section {
+        margin: 20pt;
+    }
+    .hr-one, .hr-two, .hr-three {
+        height: 20pt;
+        border: none;
+    }
 }
-
 
 @media (max-width: 576px) { 
     .body-grid {
@@ -92,12 +84,22 @@ h1{
         "main-grid"
         "main-grid";
     }
-    
     .main-grid {
         grid-template-areas: 
         "section-one"
         "section-two"
         "section-three";
     }
-
+    .header {
+        text-align: left;
+        color: white;
+        background-color: #33A8DD;
+        padding-left: 30pt;
+    }
+    .main-properties {
+        text-align: center;
+        background-color: #F7F5F6;
+        padding: 25pt 70pt;
+        color: black;
+    }
 }
